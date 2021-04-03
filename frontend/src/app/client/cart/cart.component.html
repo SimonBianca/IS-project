@@ -1,0 +1,31 @@
+<div class="cart container">
+    <div class="d-flex flex-row justify-content-between productss border-bottom mt-3 mb-2" *ngFor="let product of products">
+        <img class="imagineee" *ngIf="product?.img" src="{{product.img}}" />
+        <div class="d-flex justify-content-between flex-grow-1">
+            <div class="ml-2">
+                <div class="fields-box font-weight-bold mt-3" (click)="viewProduct(product)">
+                    {{product.name}}
+                </div>
+                <div class="product-box">
+                    Quantity: {{product.quantity}}
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-between align-items-end">
+                <div class="remove-button" (click)="removeItem(product._id)">
+                    <span class="material-icons-outlined">delete</span>
+                </div>
+                <div class="mt-auto product-box mb-1">
+                    Price: {{product.price}} lei
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="price-container font-weight-bold">
+            Subtotal: {{totalPrice}} lei
+        </div>
+        <div class="finish-order mb-1">
+            <button class="button-order" (click)="finishOrder()">Finish order</button>
+        </div>
+    </div>
+</div>

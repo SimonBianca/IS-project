@@ -1,0 +1,17 @@
+.fields-box{
+    font-family: SourceSansPro-Bold;
+    line-height: 1.2;
+    height:600px;
+    text-align:left;
+    background:rgba(247, 235, 230, 0.329);
+    padding-top:30px;
+}
+
+.info-field{
+    font-size: 20px;
+    text-align:left;
+    padding-left:40px;
+    padding-bottom: 10px;  
+    padding-right:40px;
+    color: rgb(50, 56, 20);
+}

@@ -1,0 +1,23 @@
+<div class="info-container" *ngIf="user">
+    <div class="fields-box">
+        Username:  <input class="input-box" [(ngModel)]="user.username">
+    </div>
+    <div class="fields-box">
+        Password:  <input class="input-box" [(ngModel)]="user.password">
+    </div>
+    <div class="fields-box">
+        Firstname:  <input class="input-box" [(ngModel)]="user.firstname">
+    </div>
+    <div class="fields-box">
+        Lastname:  <input class="input-box" [(ngModel)]="user.lastname">
+    </div>
+    <div class="fields-box">
+        Email:  <input class="input-box" [(ngModel)]="user.email">
+    </div>
+    <div class="fields-box">
+        Phone:  <input class="input-box" [(ngModel)]="user.phone">
+    </div>
+    <div class="button-container">
+        <button class="button-update" (click)="updateAccount()">Update</button>
+    </div>
+</div>

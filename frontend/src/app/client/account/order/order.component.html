@@ -1,0 +1,38 @@
+<div>
+    <div *ngFor="let order of orders">
+        <div class="order-container">
+            <div class="p-2">
+                <span *ngIf="order.expanded" (click)="order.expanded = false" class="color-arrow"><span class="material-icons">
+                    arrow_circle_up
+                    </span></span>
+                <span *ngIf="!order.expanded" (click)="order.expanded = true" class="color-arrow"><span class="material-icons">
+                    arrow_circle_down
+                    </span></span>
+            </div>
+            <div class="p-2">
+                Order number: {{order._id}}
+            </div>
+            <div class="p-2">
+                Status: {{order.status}}
+            </div>
+            <div class="p-2">
+                Total: {{order.total}} lei
+            </div>
+        </div>
+
+        <div *ngIf="order.expanded" class="text-color-products">
+            <div class="order-details" *ngFor="let product of order.products">
+                <img class="imagineee" *ngIf="product?.img" src="{{product.img}}" />
+                <div class="p-2" (click)="viewProduct(product)">
+                    Name: {{product.name}}
+                </div>
+                <div class="p-2">
+                    Price: {{product.price}} lei
+                </div>
+                <div class="p-2">
+                    Quantity: {{product.quantity}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

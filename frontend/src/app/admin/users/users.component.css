@@ -1,0 +1,20 @@
+:host(app-users) {
+    display: flex;
+    flex-grow: 1;
+}
+
+.delete-user {
+    width: 10px;
+    height: 5px;
+}
+
+.text {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.material-icons.md-20 {
+    font-size: 20px;
+    color: rgb(250, 121, 186);
+}

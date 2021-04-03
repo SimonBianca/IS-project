@@ -1,0 +1,36 @@
+:host(app-create-product) {
+    display: flex;
+    flex-grow: 1;
+}
+
+.label {
+    width: 100px;
+}
+
+input,
+select {
+    width: 200px;
+}
+
+.example_c {
+    padding: 5px;
+    margin: 1px;
+    color: #494949;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #494949;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    width: 132px;
+    height: auto;
+}
+
+.example_c:hover {
+    width: 132px;
+    height: auto;
+    color: #ffffff;
+    background: rgb(250, 121, 186, 0.562);
+    border-color: rgba(250, 121, 185, 0.562);
+    transition: all 0.4s ease 0s;
+}

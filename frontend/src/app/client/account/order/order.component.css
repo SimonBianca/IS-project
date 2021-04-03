@@ -1,0 +1,32 @@
+.order-container {
+    display: flex;
+    font-family: SourceSansPro-Bold;
+    font-size: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.685);
+    padding-top: 20px;
+    padding-left: 200px;
+}
+
+.order-details {
+    display: flex;
+    font-family: SourceSansPro-Bold;
+    font-size: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.685);
+    padding-top: 20px;
+    padding-left: 250px;
+}
+
+.color-arrow {
+    color: rgb(250, 121, 186);
+}
+
+.text-color-products {
+    color: rgb(250, 121, 186);
+}
+
+.imagineee {
+    height: 30px;
+    width: 30px;
+}

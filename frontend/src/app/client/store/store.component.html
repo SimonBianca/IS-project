@@ -1,0 +1,28 @@
+<div class="d-flex flex-row">
+    <div class="categories">
+        <div class="category-title">
+            Category
+        </div>
+        <div *ngFor="let category of categories" class="category-box" (click)="getProductsByCategory(category)">
+            {{category}}
+        </div>
+        <div class="all-products" (click)="getAllProducts()">
+            All products
+        </div>
+    </div>
+
+    <div class="products">
+        <div *ngFor="let product of products">
+            <div class="product-name p-2" (click)="viewProduct(product)">
+                <img *ngIf="product.img" src="{{product.img}}" class="img" />
+            </div>
+            <div class="product-name p-2" (click)="viewProduct(product)">
+                {{product.name}}
+            </div>
+            <div class="product-price">
+                {{product.price}} lei
+            </div>
+        </div>
+    </div>
+
+</div>

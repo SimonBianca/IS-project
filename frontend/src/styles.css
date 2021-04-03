@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~material-icons/iconfont/material-icons.css';
+body {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+}

@@ -1,0 +1,21 @@
+<div class="header">
+    <div class="d-flex">
+        <div class="background">
+            <div class="text" (click)='activeTab = adminTab.Orders' [ngClass]="{'active-tab': activeTab === adminTab.Orders}">
+                Orders
+            </div>
+            <div class="text" (click)='activeTab = adminTab.Products' [ngClass]="{'active-tab': activeTab === adminTab.Products}">
+                Products
+            </div>
+            <div class="text" (click)='activeTab = adminTab.Users' [ngClass]="{'active-tab': activeTab === adminTab.Users}">
+                Users
+            </div>
+        </div>
+
+        <div class="d-flex flex-grow-1">
+            <app-orders *ngIf="activeTab === adminTab.Orders"></app-orders>
+            <app-products *ngIf="activeTab === adminTab.Products"></app-products>
+            <app-users *ngIf="activeTab === adminTab.Users"></app-users>
+        </div>
+    </div>
+</div>

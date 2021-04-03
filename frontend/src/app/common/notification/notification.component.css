@@ -1,0 +1,15 @@
+.notification-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notification {
+    padding: 5px;
+    margin: 5px;
+}
+
+.material-icons.md-16 {
+    font-size: 16px;
+    color: #f7a4d9c0;
+}

@@ -1,0 +1,16 @@
+<div class="notification-container">
+    <div class="alert alert-light notification" *ngFor="let notification of notifications">
+        <div class="d-flex flex-row justify-content-between ">
+            <div class="text-dark">
+                {{notification.title}}
+            </div>
+            <span class="text-dark" (click)="deleteNotification(notification)">
+                <span class="material-icons pl-3 md-16">cancel</span>
+            </span>
+        </div>
+
+        <div class="text-dark">
+            {{notification.message}}
+        </div>
+    </div>
+</div>

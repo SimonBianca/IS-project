@@ -1,0 +1,42 @@
+<div class="d-flex flex-column flex-grow-1">
+
+    <div class="container-fluid">
+        <div class="d-flex flex-row text row border-bottom">
+            <div class="p-2 col">Username</div>
+            <div class="p-2 col">Password</div>
+            <div class="p-2 col">Firstname</div>
+            <div class="p-2 col">Lastname</div>
+            <div class="p-2 col">Email</div>
+            <div class="p-2 col">Phone</div>
+            <div class="delete-user p-2 col"></div>
+        </div>
+
+        <div *ngFor="let user of users" class="d-flex flex-column border-bottom">
+            <div class="d-flex flex-row row">
+                <div class="p-3 col">
+                    {{user.username}}
+                </div>
+                <div class="p-3 col">
+                    {{user.password}}
+                </div>
+                <div class="p-3 col">
+                    <input [(ngModel)]="user.firstname" (change)="updateUser(user)">
+                </div>
+                <div class="p-3 col">
+                    <input [(ngModel)]="user.lastname" (change)="updateUser(user)">
+                </div>
+                <div class="p-3 col">
+                    <input [(ngModel)]="user.email" (change)="updateUser(user)">
+                </div>
+                <div class="p-3 col">
+                    <input [(ngModel)]="user.phone" (change)="updateUser(user)">
+                </div>
+                <div class="p-3 col">
+                    <span (click)="deleteUser(user)">
+                        <span class="material-icons pl-3 md-20">cancel</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>

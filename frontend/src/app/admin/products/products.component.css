@@ -1,0 +1,44 @@
+:host(app-products) {
+    display: flex;
+    flex-grow: 1;
+}
+
+.delete-product {
+    width: 10px;
+    height: 5px;
+}
+
+.example_c {
+    padding: 5px;
+    margin: 5px;
+    color: #494949;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #494949;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+}
+
+.example_c:hover {
+    color: #ffffff;
+    background: rgb(250, 121, 186, 0.562);
+    border-color: rgba(250, 121, 185, 0.562);
+    transition: all 0.4s ease 0s;
+}
+
+.text {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.material-icons.md-20 {
+    font-size: 20px;
+    color: rgb(250, 121, 186);
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}

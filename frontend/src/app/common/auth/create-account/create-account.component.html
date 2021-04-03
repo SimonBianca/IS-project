@@ -1,0 +1,40 @@
+<div class="create-account-container">
+    <div class="create-account-box">
+        <span class="title">Create Account</span>
+        <form>
+            <div *ngIf="createAccountErrorMessage"
+                class="alert-message" role="alert">
+                {{createAccountErrorMessage}}
+            </div>
+
+            <div class="input-container">
+                <label class="userInput">Username</label>
+                <input class="form-control" name="userInput" type="text" [(ngModel)]="usernameModel">
+            </div>
+            <div class="input-container">
+                <label class="passInput">Password</label>
+                <input class="form-control" name="passInput" type="password" [(ngModel)]="passwordModel">
+            </div>
+            <div class="input-container">
+                <label class="firstNameInput">First name</label>
+                <input class="form-control" name="firstNameInput" type="text" [(ngModel)]="firstNameModel">
+            </div>
+            <div class="input-container">
+                <label class="lastNameInput">Last name</label>
+                <input class="form-control" name="lastNameInput" type="text" [(ngModel)]="lastNameModel">
+            </div>
+            <div class="input-container">
+                <label class="emailInput">Email</label>
+                <input class="form-control" name="emailInput" type="text" [(ngModel)]="emailModel">
+            </div>
+            <div class="input-container">
+                <label class="phoneInput">Phone number</label>
+                <input class="form-control" name="phoneInput" type="text" [(ngModel)]="phoneModel">
+            </div>
+            
+            <div class="d-flex justify-content-center mt-4">
+                <button class="button-submit btn-lg btn-block" type="submit" (click)="createAccount()">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

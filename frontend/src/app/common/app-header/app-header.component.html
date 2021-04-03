@@ -1,0 +1,21 @@
+<div class="header-container">
+    <div class="loggo-box">
+        <span class="loggo" (click)="viewStore()">
+            DB Shop
+        </span>
+    </div>
+    <div class="header-buttons">
+        <div class="padding-right d-flex flex-row align-items-center account-button" *ngIf="isClient" (click)="viewAccount()">
+            <span class="material-icons-outlined">person</span>
+            <div>Account</div>
+        </div>
+        <div class="padding-right d-flex flex-row align-items-center account-button" *ngIf="isClient" (click)="viewCart()">
+            <span class="material-icons-outlined">shopping_bag</span>
+            <div>Shopping bag</div>
+        </div>
+        <div class="padding-right d-flex flex-row align-items-center account-button" (click)="logout()">
+            <span class="material-icons">exit_to_app</span>
+            <div>Logout</div>
+        </div>
+    </div>
+</div>

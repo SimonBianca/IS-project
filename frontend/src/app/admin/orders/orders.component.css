@@ -1,0 +1,26 @@
+:host(app-orders) {
+    display: flex;
+    flex-grow: 1;
+}
+
+.text {
+    font-size: 26px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.background {
+    width: 100vh;
+}
+
+.color-arrow {
+    color: rgb(250, 121, 186);
+}
+
+.text-products {
+    font-weight: 600;
+}
+
+.text-color-products {
+    color: rgb(250, 121, 186);
+}

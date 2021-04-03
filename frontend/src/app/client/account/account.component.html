@@ -1,0 +1,15 @@
+<div class="d-flex">
+    <div class="fields-box">
+        <div class="info-field" (click)='activeTab = accountTab.AccountSettings'>
+            Account info
+        </div>
+        <div class="info-field" (click)='activeTab = accountTab.Order'>
+            Orders info
+        </div>
+    </div>
+
+    <div>
+        <app-account-settings *ngIf="activeTab === accountTab.AccountSettings"></app-account-settings>
+        <app-order *ngIf="activeTab === accountTab.Order"></app-order>
+    </div>
+</div>

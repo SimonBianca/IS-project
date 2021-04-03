@@ -1,0 +1,49 @@
+<div class="d-flex flex-column background flex-grow-1">
+
+    <div class="container-fluid">
+        <div class="d-flex flex-row text row border-bottom">
+            <div class="p-2 col-1"></div>
+            <div class="p-2 col">Number</div>
+            <div class="p-2 col">Client</div>
+            <div class="p-2 col">Status</div>
+            <div class="p-2 col">Total</div>
+        </div>
+
+        <div *ngFor="let order of orders" class="d-flex flex-column border-bottom">
+            <div class="d-flex flex-row row">
+                <div class="p-2 col-1">
+                    <span *ngIf="order.expanded" (click)="order.expanded = false" class="color-arrow">
+                        <span class="material-icons">
+                            arrow_circle_up
+                            </span>
+                    </span>
+                    <span *ngIf="!order.expanded" (click)="order.expanded = true" class="color-arrow">
+                        <span class="material-icons">
+                            arrow_circle_down
+                            </span>
+                    </span>
+                </div>
+                <div class="p-2 col">{{order._id}}</div>
+                <div class="p-2 col">{{order.username}}</div>
+                <div class="p-2 col custom-select-wrapper">
+                    <select (change)="updateOrderStatus(order)" [(ngModel)]="order.status">
+                    <option *ngFor="let status of orderStatus" [ngValue]="status">{{status}}</option>
+                </select>
+                </div>
+                <div class="p-2 col">{{order.total}}</div>
+            </div>
+            <div *ngIf="order.expanded" class="border-top text-color-products">
+                <div class="d-flex flex-row row text-products">
+                    <div class="p-2 col">Name</div>
+                    <div class="p-2 col">Price</div>
+                    <div class="p-2 col">Quantity</div>
+                </div>
+                <div *ngFor="let product of order.products" class="d-flex flex-row row">
+                    <div class="p-2 col">{{product.name}}</div>
+                    <div class="p-2 col">{{product.price}}</div>
+                    <div class="p-2 col">{{product.quantity}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
